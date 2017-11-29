@@ -1,0 +1,9 @@
+[
+  { "caption": "Sonic Pi: Run code from current Window", "command": "sp_run_file" },
+  { "caption": "Sonic Pi: Stops all running threads on the server", "command": "sp_stop_all_jobs" },
+  { "caption": "Sonic Pi: Start Live Mode (Enabled Autosave)", "command": "sp_start_plugin"},
+  { "caption": "Sonic Pi: Stop Live Mode (Disables Autosave)", "command": "sp_stop_plugin"}
+]
+
+
+

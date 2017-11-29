@@ -1,0 +1,6 @@
+[
+  { "keys": ["ctrl+s"], "command": "sp_run_file" },
+  { "keys": ["super+escape"], "command": "sp_stop_all_jobs" }
+]
+
+
