@@ -2,6 +2,8 @@
 
 My attempt is to write a Sublime Text 3 Plugin that allows writing Sonic Pi Code in Sublime. 
 
+<img src="screen.png" alt="screenshot"/>
+
 ## Getting Started
 
 Under the menu entry `Tools` you are able to select 4 actions in the corresponding `Sonic Pi` submenu:
