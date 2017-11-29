@@ -1,0 +1,33 @@
+[
+  {
+    "id": "tools",
+    "children": [
+      {
+        "id": "Sonic Pi",
+        "caption": "Sonic Pi",
+        "children": [
+          {
+            "caption": "Start Live Mode (Enables Autosave)",
+            "command": "sp_start_plugin"
+          },
+          {
+            "caption": "Stop Live Mode (Disables Autosave)",
+            "command": "sp_start_plugin"
+          },
+          {
+            "caption": "-", 
+            "id": "seperator"
+          },
+          {
+            "caption": "Play Current File",
+            "command": "sp_run_file"
+          },
+          {
+            "caption": "Stop All Jobs",
+            "command": "sp_stop_all_jobs"
+          }
+        ]
+      }
+    ]
+  }
+]
