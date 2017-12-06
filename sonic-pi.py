@@ -44,7 +44,7 @@ class SaveListener(sublime_plugin.EventListener):
         code = getCurrentTextSelection(view)
         print(pluginRunning)
         if (pluginRunning):
-            sendCodeToLocalServer(view.id(), code)
+            sendCodeToCollabServer(currentName, code)
 #
 # Commands
 #
@@ -61,6 +61,7 @@ class SpStopAllJobsCommand(sublime_plugin.TextCommand):
 class SpRunFileOnServerCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         code = getCurrentTextSelection(currentName, self.view)
+        sendCodeToCollabServer(currentName, code)
 
 
 

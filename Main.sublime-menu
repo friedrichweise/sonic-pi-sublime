@@ -25,6 +25,13 @@
           {
             "caption": "Stop All Jobs",
             "command": "sp_stop_all_jobs"
+          },
+          { "caption": "-",
+          "id": "seperator2"
+          },
+          {
+            "caption": "Send Code to Server",
+            "command": "sp_run_file_on_server"
           }
         ]
       }
