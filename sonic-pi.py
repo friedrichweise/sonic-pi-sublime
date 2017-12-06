@@ -5,7 +5,16 @@ sys.path.append(os.path.join(os.path.dirname(__file__), "pythonosc"))
 from pythonosc import osc_message_builder
 from pythonosc import udp_client
 
-sender = udp_client.SimpleUDPClient('127.0.0.1', 4557)
+import http.client, urllib
+
+
+
+#sender = udp_client.SimpleUDPClient('127.0.0.1', 4557)
+sender = udp_client.SimpleUDPClient('192.168.178.82', 4559)
+url = '0.0.0.0:3000'
+headers = {'Content-Type': 'text/plain'}
+connection = http.client.HTTPConnection(url)
+
 
 #
 # Global Plugin Running Commands
@@ -35,7 +44,12 @@ class SaveListener(sublime_plugin.EventListener):
 class SpRunFileCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         code = getCurrentTextSelection(self.view)
-        sendCode(self.view.id(), code)
+        #sendCode(self.view.id(), code)
+        headers = {"Content-type": "text/plain"}
+        connection.request('POST', '/run-code/friedrich', code, headers)
+        response = connection.getresponse()
+        response.read()
+        print(response.read().decode())
 
 class SpStopAllJobsCommand(sublime_plugin.TextCommand):
     def run(self, edit):
@@ -46,7 +60,8 @@ class SpStopAllJobsCommand(sublime_plugin.TextCommand):
 # helper functions
 # 
 def sendCode(id, code):
-    sender.send_message('/run-code', [id, code])
+    print('send: ', code)
+    sender.send_message('/run-code', ['my_client', code])
 def sendStop():
     sender.send_message('/stop-all-jobs', [])
 
