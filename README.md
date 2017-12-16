@@ -1,10 +1,10 @@
 # Sonic Pi Sublime Text 3 Plugin
 
-My attempt is to write a Sublime Text 3 Plugin that allows writing Sonic Pi Code in Sublime. 
+A simple Sublime Text 3 Plugin that allows writing Sonic Pi Code in Sublime. 
 
 <img src="screen.png" alt="screenshot"/>
 
-## Getting Started
+## Features
 
 Under the menu entry `Tools` you are able to select 4 actions in the corresponding `Sonic Pi` submenu:
 * **Start Live Mode**: With this mode enabled saving a file in Sublime sends it to the Sonic Pi Server
@@ -14,7 +14,17 @@ Under the menu entry `Tools` you are able to select 4 actions in the correspondi
 
 Key bindings can be modified in `Default.sublime-keymap`.
 
-## Compability
+## Installation
+
+**Step 1**: Clone the project into your `/Packages/User/` folder of your Sublime Installation. You can locate the folder using the Sublime menu "Preferences → Browse Packages".
+
+```
+$ cd "~/Library/Application Support/Sublime Text 3/Packages/User"
+$ git clone https://github.com/friedrichweise/sonic-pi-sublime.git
+```
+**Step 2**: The plugin currently requires the installation of the Python dependency `pythonosc`. Simply download the dependency from <a href="https://github.com/attwad/python-osc/releases">https://github.com/attwad/python-osc/releases</a> and rename it to `pythonosc`. After putting the folder in the `sonic-pi-sublime` plugin folder you are good to go.
+
+## Compatibility
 
 *Feel free to contribute to this table:*
 
@@ -23,9 +33,5 @@ Key bindings can be modified in `Default.sublime-keymap`.
 | macOS 10.13 | 3.0 | 3.0.1 | ✅ |
 
 
-## Features
-Please use the Github Issues for Feature requests-
-
-* autocompletion
-* show logging information from server
-* visualize Live-Mode with green dot
+## Bugs
+Please use the Github Issues to report any kind of bugs or problems.
